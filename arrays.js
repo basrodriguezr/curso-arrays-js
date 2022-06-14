@@ -120,3 +120,28 @@ console.log(suma(...numeros)); //forma optima
 const arr = [...numeros, ...beers];
 
 console.log(arr);
+
+/*
+forma erronea y nub de "copiar" arrays
+const numeros2 = numeros; 
+esto está mal porque se hace una copia de la referencia del arreglo numeros, por lo que si se edita el numeros2, el valor de referencia
+que está en memoria tambien esta en numeros
+
+console.log(`numeros: ${numeros}`)
+const numeros2 = numeros; 
+console.log(`numeros2: ${numeros2}`)
+numeros2[0] = 3;
+console.log(`\nEditando numeros2[0] = 3\n`)
+console.log(`numeros: ${numeros}`)
+console.log(`numeros2: ${numeros2}`)
+
+forma correcta:
+
+console.log(`numeros: ${numeros}`)
+const numeros2 = [...numeros]; 
+console.log(`numeros2: ${numeros2}`)
+numeros2[0] = 3;
+console.log(`\nEditando numeros2[0] = 3\n`)
+console.log(`numeros: ${numeros}`)
+console.log(`numeros2: ${numeros2}`)
+*/
