@@ -40,4 +40,21 @@ showBeers = (array) =>{
         console.log(array[i]);
     }
 }
-showBeers(cervezas);
+//showBeers(cervezas);
+
+/*
+    Recorriendo un Dom
+*/
+
+showDom = (e,array) =>{
+    document.getElementById(e).innerHTML = "";
+
+    for(let i=0;i<array.length;i++){
+        document.getElementById(e).innerHTML += `<div>${array[i]}</div>`;      
+    }
+}
+
+
+
+showDom("array1", cervezas);
+showDom("array2", cervezas);
