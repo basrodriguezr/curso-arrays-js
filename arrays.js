@@ -54,7 +54,7 @@ showDom = (e,array) =>{
     }
 }
 
-showDom("array1", cervezas);
+//showDom("array1", cervezas);
 
 //metodos mutables: modifican el estado de los objetos, el estado refiere a un valor del objeto
 
@@ -62,11 +62,11 @@ cervezas.push("Corona"); //agregar un elemnento al final del array
 cervezas.unshift("Heineken"); //agregar un elemnento al inicio del array
 cervezas.splice(2,0,"Sol"); //param 1: donde se quiere agregar el elemento,  param2: elemento a eliminar (si es 0 no se elimina), param3: elemento a insertar
 
-showDom("array2", cervezas);
+//showDom("array2", cervezas);
 
 cervezas.splice(2,2,"Kross"); 
 
-showDom("array3", cervezas);
+//showDom("array3", cervezas);
 
 //eliminar elementos
 let b = cervezas.pop(); //elimina el ultimo elemento del array
@@ -82,4 +82,19 @@ const alcoholDrinks = cervezas.concat(vinos);
 
 //console.log(alcoholDrinks);
 
-showDom("array4", alcoholDrinks);
+//showDom("array4", alcoholDrinks);
+
+//buscar elemento dentro del array con indexof
+
+// console.log(alcoholDrinks.indexOf("merlot")); //merlot
+// console.log(alcoholDrinks.indexOf("corona")); //retorna -1 si no existe el elemento
+// console.log(alcoholDrinks.indexOf(5)); // retorna -1, pues no hay un 5 en el array, es estricto
+
+//generar nuevo array a partir de un grupo de parametros con slice(posicion inicial,posicion final); - metodo inmutable
+// const beers = cervezas.slice(0,5);
+// console.log("")
+// console.log(beers)
+// console.log("")
+
+
+
