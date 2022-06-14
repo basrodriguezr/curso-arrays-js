@@ -97,9 +97,26 @@ const beers = cervezas.slice(0,5);
 // console.log("")
 
 //metodo mutable: fill: inserta elementos de una posicion hasta donde se limite
-beers.fill("pato",0,3);
+// beers.fill("pato",0,3);
 
-console.log("") 
-console.log(beers)
- console.log("")
+// console.log("") 
+// console.log(beers)
+//  console.log("")
 
+/*  
+    uso de spreads o ... (si, tres puntos)
+*/
+//let numeros = [24,500,0,3];
+suma = (a,b,c,d) => {
+    return a+b+c+d;
+}
+
+console.log(suma(1,2,3,4));
+console.log(suma(numeros[0],numeros[1],numeros[2],numeros[3],)); //tedioso
+console.log(suma(...numeros)); //forma optima
+
+//usandolo de forma practica
+
+const arr = [...numeros, ...beers];
+
+console.log(arr);
