@@ -198,14 +198,14 @@ const wines = [
         alcohol: 4.9
     }
 ];
-//v2
-showDom = (e,array) =>{
-    document.getElementById(e).innerHTML = "";
+// //v2
+// showDom = (e,array) =>{
+//     document.getElementById(e).innerHTML = "";
 
-    for(let i=0;i<array.length;i++){
-        document.getElementById(e).innerHTML += `<div>${array[i].name} $ ${array[i].price} (${array[i].alcohol}°)</div>`;      
-    }
-}
+//     for(let i=0;i<array.length;i++){
+//         document.getElementById(e).innerHTML += `<div>${array[i].name} $ ${array[i].price} (${array[i].alcohol}°)</div>`;      
+//     }
+// }
 
 //showDom("array1",beers);
 
@@ -227,4 +227,40 @@ showWinesAndBeers = (e,array,fn) =>{
     }
 }
 
-showWinesAndBeers("array2",wines,fn);
+//showWinesAndBeers("array2",wines,fn);
+
+//for-of de  objetos iterables
+
+//v3
+showDom = (element,array) =>{
+    document.getElementById(element).innerHTML = "";
+
+    for(let e of array){
+        document.getElementById(element).innerHTML += `<div>${e.name} $ ${e.price} (${e.alcohol}°)</div>`;      
+    }
+}
+
+
+
+//uso de foreach en arrays
+//beers.forEach((element)=>{ console.log(element)}); 
+//uso de sort en un array de objetos
+
+beers.sort((a,b)=>{return a.price-b.price});
+showDom("array1",beers);
+beers.sort((a,b)=>{return a.alcohol-b.alcohol});
+showDom("array2",beers);
+
+beers.sort((a,b)=>{
+    if(a.name < b.name){
+        return -1;
+    }
+
+    if(a.name > b.name){
+        return 1;
+    }
+
+    return 0;
+});
+
+showDom("array3",beers);
