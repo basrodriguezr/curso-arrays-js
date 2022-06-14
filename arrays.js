@@ -279,4 +279,50 @@ const beer2 = beers.find(element => element.alcohol < 5); /*solo se busca el pri
 // console.clear();
 const beer3 = beers.filter(element => element.alcohol > 4); 
 // console.log(beer3);
-showDom("array3",beer3)
+//showDom("array3",beer3)
+
+
+//uso de every en un array de objetos: retorna true or false, si la condicion de la funcion no se cumple se retorna falso
+let fn2=(e) => e.price > 5;
+// console.log(beers.every(fn2));
+
+//uso de some: evalua si uno de los objetos cumple la condicion, si alguno cumple retorna true
+// console.log(beers.some(fn2));
+
+//uso de reverse: invierte el orden de los objetos
+// console.log(beers);
+
+// console.log(beers.reverse());
+
+//uso de map(): retorna un nuevo array con los resultados de la funcion
+const beers2 =beers.map(element => {
+    return {
+        name: element.name,
+        price: element.price*2,
+        alcohol: element.alcohol
+    }
+});
+
+// showDom("array1",beers);
+// showDom("array2",beers2);
+
+//reduce: retorna un solo valor escalar
+reducir = (array) =>{
+    const sum1 =array.reduce((acc,curr) => acc + curr.price,0);
+    const sum2 =array.reduce((acc,curr) => acc + curr.alcohol,0);
+    const concatBeers =array.reduce((acc,curr) => acc + curr.name,"");
+
+    console.log(sum1);
+    console.log(sum2);
+    console.log(concatBeers);
+}
+
+//reducir(beers);
+//array de funciones
+const fns = [
+    ()=>{console.log("hola")},
+    ()=>{console.log("hello")},
+    ()=>{console.log("bonjour")}
+];
+
+fns.forEach(element => element());
