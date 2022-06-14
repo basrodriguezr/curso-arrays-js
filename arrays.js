@@ -91,10 +91,15 @@ const alcoholDrinks = cervezas.concat(vinos);
 // console.log(alcoholDrinks.indexOf(5)); // retorna -1, pues no hay un 5 en el array, es estricto
 
 //generar nuevo array a partir de un grupo de parametros con slice(posicion inicial,posicion final); - metodo inmutable
-// const beers = cervezas.slice(0,5);
+const beers = cervezas.slice(0,5);
 // console.log("")
 // console.log(beers)
 // console.log("")
 
+//metodo mutable: fill: inserta elementos de una posicion hasta donde se limite
+beers.fill("pato",0,3);
 
+console.log("") 
+console.log(beers)
+ console.log("")
 
