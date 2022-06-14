@@ -1,8 +1,8 @@
 /*
-    curso de arrays 
+    Arrays numéricos
 */
 
-let numeros = [24,500,0,3]
+let numeros = [24,500,0,3];
 
 /*
     funcion para obtener una posicion dentro del array "at()"
@@ -28,7 +28,16 @@ showArrayDesc = (array) => {
 // showArrayDesc(numeros);
 
 
+/*
+    Arrays de strings
+*/
+
+let cervezas = ['Cristal','Volcanes del sur','Escudo','Kunstmann','Erdinger','Guiness'];
 
 
-
-
+showBeers = (array) =>{
+    for(let i=0;i<array.length;i++){
+        console.log(array[i]);
+    }
+}
+showBeers(cervezas);
