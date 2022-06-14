@@ -54,7 +54,23 @@ showDom = (e,array) =>{
     }
 }
 
+//showDom("array1", cervezas);
 
+//metodos mutables
 
-showDom("array1", cervezas);
-showDom("array2", cervezas);
+cervezas.push("Corona"); //agregar un elemnento al final del array
+cervezas.unshift("Heineken"); //agregar un elemnento al inicio del array
+cervezas.splice(2,0,"Sol"); //param 1: donde se quiere agregar el elemento,  param2: elemento a eliminar (si es 0 no se elimina), param3: elemento a insertar
+
+//showDom("array2", cervezas);
+
+cervezas.splice(2,2,"Kross"); 
+
+//showDom("array3", cervezas);
+
+//eliminar elementos
+let b = cervezas.pop(); //elimina el ultimo elemento del array
+let b2 = cervezas.shift(); //elimina el primer elemento del array
+
+console.log(b);
+console.log(b2);
