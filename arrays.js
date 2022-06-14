@@ -247,9 +247,12 @@ showDom = (element,array) =>{
 //uso de sort en un array de objetos
 
 beers.sort((a,b)=>{return a.price-b.price});
-showDom("array1",beers);
+
+// showDom("array1",beers);
+
 beers.sort((a,b)=>{return a.alcohol-b.alcohol});
-showDom("array2",beers);
+
+// showDom("array2",beers);
 
 beers.sort((a,b)=>{
     if(a.name < b.name){
@@ -263,4 +266,17 @@ beers.sort((a,b)=>{
     return 0;
 });
 
-showDom("array3",beers);
+// showDom("array3",beers);
+
+const beer = beers.find(element => element.name === "heineken");
+// console.log(beer);
+//showDom("array1",beer)
+
+const beer2 = beers.find(element => element.alcohol < 5); /*solo se busca el primer elemento que se encuentra que sea menor que 5 */
+// console.log(beer2);
+//showDom("array2",beer2)
+
+// console.clear();
+const beer3 = beers.filter(element => element.alcohol > 4); 
+// console.log(beer3);
+showDom("array3",beer3)
